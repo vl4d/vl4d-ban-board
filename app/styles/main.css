@@ -1,0 +1,28 @@
+body{
+  font-family: 'Roboto Slab', serif
+}
+
+md-toolbar#main-toolbar{
+  min-height:52px;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:100;
+
+}
+
+#main-container {
+  padding-top: 80px;
+  background-color: snow;
+  height: 100%;
+}
+#menu-icon {
+  width: 24px; height: 24px;
+  background: url("../images/ic_grey-menu.png");
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#menu-icon:hover {
+    background: #0277bd url("../images/ic_white-menu.png") right no-repeat;
+}

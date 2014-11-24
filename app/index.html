@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vl4d-Ban-Board</title>
+    <!-- personal styling -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- default themes and core styles -->
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
+    <!-- Roboto font-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+  </head>
+  <body ng-app="vl4dBanBoardApp">
+    <md-toolbar id="main-toolbar" md-theme="default" class="md-whiteframe-z2">
+      <div class="md-toolbar-tools">
+
+        <md-button id="menu-icon"></md-button>
+        <span>Vl4d-Ban-Board</span>
+
+        <!-- fill up the space between left and right area -->
+        <span flex></span>
+        <!-- TODO add buttons -->
+        <md-button>
+          Right Bar Button
+        </md-button>
+      </div>
+
+    </md-toolbar>
+    <md-sidenav></md-sidenav>
+    <md-content id="main-container" class="md-padding" ng-view></md-content>
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/hammerjs/hammer.js"></script>
+    <script src="../bower_components/json3/lib/json3.js"></script>
+    <script src="../bower_components/angular-material/angular-material.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/home-controller.js"></script>
+    <script src="scripts/controllers/card-controller.js"></script>
+</body>
+</html>
