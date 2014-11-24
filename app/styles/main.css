@@ -26,3 +26,18 @@ md-toolbar#main-toolbar{
 #menu-icon:hover {
     background: #0277bd url("../images/ic_white-menu.png") right no-repeat;
 }
+
+md-sidenav#sidenav {
+  padding-top: 65px;
+  /*max-width: 150px;*/
+}
+
+/* Floating Button */
+.upward_btn{
+  position:fixed;
+  top: 90%;
+  right: 5%;
+}
+.upward_btn img{
+  width: 24px;
+}

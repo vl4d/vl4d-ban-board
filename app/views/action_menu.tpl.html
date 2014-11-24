@@ -1,0 +1,14 @@
+<md-bottom-sheet class="md-grid">
+  <!--TODO Update once md-icon has been fixed!-->
+  <md-list>
+    <md-item ng-repeat="item in action_items">
+
+      <md-button class="md-grid-item-content"aria-label="{{item.name}}" ng-click="listItemClick($index)">
+        <div class="md-icon-container"  style="height:24px; width:24px;">
+        </div>
+        <p class="md-grid-text"> {{ item.name }} </p>
+      </md-button>
+
+    </md-item>
+  </md-list>
+</md-bottom-sheet>
