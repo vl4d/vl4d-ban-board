@@ -10,11 +10,11 @@
 app.controller('ActionMenuCtrl', function($scope, $mdBottomSheet) {
   //Items that will show on the Action menu that pops up.
   $scope.action_items = [
-    { name: 'Create',   icon: 'images/ic_grey_create.png' },
-    { name: 'Edit',     icon: 'images/ic_grey_edit.png'   },
-    { name: 'Load',     icon: 'images/ic_grey_load.png'   },
-    { name: 'Save',     icon: 'images/ic_grey_save.png'   },
-    { name: 'Share',    icon: 'images/ic_grey_share.png'  }
+    { name: 'Create',   icon: 'images/ic_grey-create.png' },
+    { name: 'Edit',     icon: 'images/ic_grey-edit.png'   },
+    { name: 'Load',     icon: 'images/ic_grey-load.png'   },
+    { name: 'Save',     icon: 'images/ic_grey-save.png'   },
+    { name: 'Share',    icon: 'images/ic_grey-share.png'  }
   ];
 
   $scope.listItemClick = function($index) {
