@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- Default md themes and core styles -->
     <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
-    <!-- Roboto font-->
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../bower_components/angular-material/themes/amber-theme.css">
+    <link rel="stylesheet" href="../bower_components/angular-material/themes/deep-purple-theme.css">
+    <link rel="stylesheet" href="../bower_components/angular-material/themes/teal-theme.css">
+    <link rel="stylesheet" href="../bower_components/angular-material/themes/orange-theme.css">
+    <link rel="stylesheet" href="../bower_components/angular-material/themes/light-green-theme.css">
+    <!-- ng-sortable Styles -->
+    <link rel="stylesheet" href="../bower_components/ng-sortable/dist/ng-sortable.min.css" />
   </head>
-  <body ng-app="vl4dBanBoardApp" ng-controller="MainCtrl" flex>
-      <md-toolbar id="main-toolbar" md-theme="default" class="md-whiteframe-z2">
+  <body ng-app="vl4dBanBoardApp" ng-controller="MainCtrl" ng-cloak >
+      <md-toolbar id="main-toolbar" class="md-whiteframe-z2">
         <div class="md-toolbar-tools">
 
           <md-button ng-click="toggleLeft()" aria-label="Menu Icon" id="menu-icon">
@@ -19,7 +24,9 @@
               Open Sidenav
             </md-tooltip>
           </md-button>
-          <span>Vl4d-Ban-Board</span>
+          <md-button aria-label="Logo" ng-href="#{{item.url}}">
+            Vl4d-Ban-Board
+          </md-button>
 
           <!-- fill up the space between left and right area -->
           <span flex></span>
@@ -32,11 +39,11 @@
       </md-toolbar>
 
       <section flex>
-        <md-sidenav id="sidenav" class="md-sidenav-left md-whiteframe-z2" component-id="left" >
+        <md-sidenav id="sidenav" class="md-sidenav-left md-whiteframe-z2" component-id="left" flex="15">
           <md-content class="md-padding">
             <md-list>
               <md-item ng-repeat="item in items">
-                <md-item-content><md-button aria-label="nav item" flex>{{item}}</md-button></md-item-content>
+                <md-item-content><md-button aria-label="nav item" flex ng-href="#{{item.url}}" ng-click="toggleLeft()">{{item.title}}</md-button></md-item-content>
               </md-item>
             </md-list>
           </md-content>
@@ -44,17 +51,20 @@
 
         <md-content id="main-container" flex class="md-padding" ng-view></md-content>
       </section>
-    <!-- Scripts Needed   -->
+    <!-- Component Scripts Needed   -->
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-route/angular-route.js"></script>
     <script src="../bower_components/angular-aria/angular-aria.js"></script>
     <script src="../bower_components/angular-animate/angular-animate.js"></script>
     <script src="../bower_components/hammerjs/hammer.js"></script>
     <script src="../bower_components/angular-material/angular-material.js"></script>
+    <script src="../bower_components/ng-sortable/dist/ng-sortable.min.js"></script>
+    <!-- App Scripts -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/home-controller.js"></script>
     <script src="scripts/controllers/main-controller.js"></script>
     <script src="scripts/controllers/card-controller.js"></script>
     <script src="scripts/controllers/action-menu-controller.js"></script>
+    <!-- Temp Scripts for POC -->
 </body>
 </html>

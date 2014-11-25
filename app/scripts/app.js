@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-var app = angular.module('vl4dBanBoardApp', ['ngMaterial','ngRoute']);
+var app = angular.module('vl4dBanBoardApp', ['ngMaterial','ngRoute', 'ui.sortable']);
 
 //////configure Routes//////
 app.config(function($routeProvider){
@@ -16,14 +16,6 @@ app.config(function($routeProvider){
     when('/home',{
       templateUrl : 'views/home.tpl.html',
       controller : 'HomeCtrl'
-    }).
-    when('/card/new', {
-      templateUrl: 'views/edit_card.tpl.html',
-      controller : 'CardCtrl'
-    }).
-    when('/card/edit',{
-      templateUrl: 'views/edit_card.tpl.html',
-      controller: 'CardCtrl'
     }).
     otherwise({redirectTo:'/home'});
 });
