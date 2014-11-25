@@ -38,6 +38,15 @@ md-sidenav#sidenav {
   top: 90%;
   right: 5%;
 }
-.upward_btn img{
+.upward_btn img {
   width: 24px;
+}
+
+.kanban-col {
+  border-right: 1px dashed #330033;
+}
+
+.kanban-col header {
+  font-weight: bold;
+  text-align: center;
 }
