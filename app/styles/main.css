@@ -46,6 +46,7 @@ md-sidenav#sidenav {
   width: 24px;
 }
 
+/* Kanban styles*/
 .kanban-col {
   background-color: white;
 }
@@ -64,4 +65,21 @@ ul
 {
   list-style-type: none;
   padding: 0;
+}
+
+/*ng-sortable styles*/
+
+.as-sortable-item, .as-sortable-placeholder {
+  min-height: 20px;
+  margin: 1px 2px 5px 1px;
+}
+
+.as-sortable-placeholder {
+  border: 1px dashed darkgrey;
+  box-sizing: border-box;
+  background-color: ghostwhite;
+}
+
+.as-sortable-drag {
+  opacity: .8;
 }

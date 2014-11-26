@@ -8,7 +8,7 @@
  * Controller of the homepage for the vl4d-ban-board app
  */
 app.controller('HomeCtrl', function ($scope, $mdBottomSheet) {
-  //Mock Data - TODO Pull From File
+  //Mock Data - TODO Pull From File Using a service
   $scope.kanban_cols =  [
                           {
                             title: "TODO",
@@ -42,8 +42,9 @@ app.controller('HomeCtrl', function ($scope, $mdBottomSheet) {
 
   ];
 
+  //Options for ng-sortable
   $scope.sortableOptions = {
-    containment: '#board',
+    containment: '#vl4d-ban-board',
     //restrict move across columns. move only within column.
     accept: function (sourceItemHandleScope, destSortableScope) {
       return sourceItemHandleScope.itemScope.sortableScope.$id === destSortableScope.$id;
@@ -53,7 +54,7 @@ app.controller('HomeCtrl', function ($scope, $mdBottomSheet) {
   //Action menu that pops up when the upward icon is clicked.
   $scope.showActionMenu = function($event){
     $mdBottomSheet.show({
-      templateUrl: '../../views/partials/action_menu.tpl.html',
+      templateUrl: 'views/partials/action_menu.tpl.html',
       controller: 'ActionMenuCtrl',
       targetEvent: $event
     }).then(function(clickedItem) {

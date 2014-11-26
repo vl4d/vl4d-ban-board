@@ -10,9 +10,7 @@
 app.controller('MainCtrl', function($scope, $mdSidenav){
   //Sidenav items and urls
   $scope.items = [
-                  {title: "Home", url: "/home"},
-                  {title: "Edit Card", url: "/card/edit"},
-                  {title: "New Card", url: "/card/new"}
+                  {title: "Home", url: "/home"}
   ];
 
   $scope.toggleLeft = function() {

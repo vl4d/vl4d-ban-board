@@ -1,5 +1,4 @@
-<!--TODO change themes for cards + make cards & text smaller!-->
-<div id="board" layout="row" layout-align="center" style="min-height:550px;" ng-cloak>
+<div id="vl4d-ban-board" layout="row" layout-align="center" style="min-height:550px;" ng-cloak>
   <md-card md-theme="{{col.theme}}" class="md-padding kanban-col"
            ng-repeat="col in kanban_cols"
            data-columnindex="{{$index}}" id="col{{$index}}" layout="column" flex>
@@ -9,7 +8,7 @@
           <header flex>{{col.title}}</header>
         </h3>
       </md-toolbar>
-      <ul data-as-sortable="kanbanSortOptions" ng-model="col.cards">
+      <ul as-sortable="kanbanSortOptions" ng-model="col.cards">
         <li ng-repeat="card in col.cards" as-sortable-item ng-include="'views/partials/card.tpl.html'"></li>
       </ul>
     </md-content>
