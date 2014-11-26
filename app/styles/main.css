@@ -1,5 +1,9 @@
 body{
-  font-family: 'Roboto Slab', serif
+  font-family: 'Roboto Slab', serif;
+}
+/*For ng-cloak - Preventing Angular from showing before loaded.*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }
 
 md-toolbar#main-toolbar{
@@ -13,7 +17,7 @@ md-toolbar#main-toolbar{
 
 #main-container {
   padding-top: 80px;
-  background-color: snow;
+  background-color: #d0cbcb;
   height: 100%;
 }
 #menu-icon {
@@ -42,11 +46,40 @@ md-sidenav#sidenav {
   width: 24px;
 }
 
+/* Kanban styles*/
 .kanban-col {
-  border-right: 1px dashed #330033;
+  background-color: white;
 }
 
 .kanban-col header {
   font-weight: bold;
   text-align: center;
+}
+
+md-toolbar.divider-height{
+  height: 2px;
+  min-height: 1px;
+}
+
+ul
+{
+  list-style-type: none;
+  padding: 0;
+}
+
+/*ng-sortable styles*/
+
+.as-sortable-item, .as-sortable-placeholder {
+  min-height: 20px;
+  margin: 1px 2px 5px 1px;
+}
+
+.as-sortable-placeholder {
+  border: 1px dashed darkgrey;
+  box-sizing: border-box;
+  background-color: ghostwhite;
+}
+
+.as-sortable-drag {
+  opacity: .8;
 }
