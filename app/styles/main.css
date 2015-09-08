@@ -65,6 +65,7 @@ ul
 {
   list-style-type: none;
   padding: 0;
+  min-height: 40px;
 }
 
 /*ng-sortable styles*/
